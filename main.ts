@@ -1,8 +1,10 @@
 input.onSwitchMoved(SwitchDirection.Right, function () {
     keyboard.key("[", KeyboardKeyEvent.Press)
+    keyboard.clearAllKeys()
 })
 input.onGesture(Gesture.TiltLeft, function () {
     keyboard.key("a", KeyboardKeyEvent.Press)
+    keyboard.clearAllKeys()
 })
 input.buttonA.onEvent(ButtonEvent.Click, function () {
     keyboard.key("q", KeyboardKeyEvent.Press)
@@ -37,9 +39,11 @@ input.buttonA.onEvent(ButtonEvent.Click, function () {
 })
 input.onGesture(Gesture.TiltRight, function () {
     keyboard.key("d", KeyboardKeyEvent.Press)
+    keyboard.clearAllKeys()
 })
 input.buttonB.onEvent(ButtonEvent.Click, function () {
     keyboard.key("i", KeyboardKeyEvent.Press)
+    keyboard.clearAllKeys()
     music.pewPew.play()
     light.showRing(
     `red red red red red red red red red red`
