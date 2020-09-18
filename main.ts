@@ -7,10 +7,32 @@ input.onGesture(Gesture.TiltLeft, function () {
 input.buttonA.onEvent(ButtonEvent.Click, function () {
     keyboard.key("q", KeyboardKeyEvent.Press)
     music.jumpUp.play()
-    light.showRing(
-    `yellow yellow yellow yellow yellow yellow yellow yellow yellow yellow`
-    )
-    light.clear()
+    control.runInParallel(function () {
+        light.setPixelColor(4, light.rgb(105, 48, 195))
+        pause(75)
+        light.setPixelColor(3, 0xff0000)
+        pause(75)
+        light.setPixelColor(2, 0xff0000)
+        pause(75)
+        light.setPixelColor(1, 0xff0000)
+        pause(75)
+        light.setPixelColor(0, 0xff0000)
+        pause(200)
+        light.clear()
+    })
+    control.runInParallel(function () {
+        light.setPixelColor(5, light.rgb(105, 48, 195))
+        pause(75)
+        light.setPixelColor(6, light.rgb(83, 144, 243))
+        pause(75)
+        light.setPixelColor(7, 0xff0000)
+        pause(75)
+        light.setPixelColor(8, 0xff0000)
+        pause(75)
+        light.setPixelColor(9, 0xff0000)
+        pause(200)
+        light.clear()
+    })
 })
 input.onGesture(Gesture.TiltRight, function () {
     keyboard.key("d", KeyboardKeyEvent.Press)
