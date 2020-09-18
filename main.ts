@@ -45,10 +45,12 @@ input.buttonB.onEvent(ButtonEvent.Click, function () {
     keyboard.key("i", KeyboardKeyEvent.Press)
     keyboard.clearAllKeys()
     music.pewPew.play()
-    light.showRing(
-    `red red red red red red red red red red`
-    )
-    light.clear()
+    control.runInParallel(function () {
+        light.showRing(
+        `red red red red red red red red red red`
+        )
+        light.clear()
+    })
 })
 input.onSwitchMoved(SwitchDirection.Left, function () {
     keyboard.key("p", KeyboardKeyEvent.Press)
