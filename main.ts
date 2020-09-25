@@ -43,13 +43,13 @@ input.buttonB.onEvent(ButtonEvent.Click, function () {
             pause(20)
         }
 for (let l = 0; l <= 2; l++) {
-            light.setPixelColor(2 - l, 0xff0000)
-            light.setPixelColor(2 + l, 0xff0000)
+            light.setPixelColor(2 - l, 0x000000)
+            light.setPixelColor(2 + l, 0x000000)
             pause(20)
         }
         for(let m =2 ; m>=0; m--){     
-            light.setPixelColor(7-m, 0x00000000);
-            light.setPixelColor(7+m, 0x00000000);
+            light.setPixelColor(7-m, 0x000000);
+            light.setPixelColor(7+m, 0x000000);
             pause(20)
         }
 light.clear()
@@ -59,10 +59,10 @@ input.onSwitchMoved(SwitchDirection.Left, function () {
     keyboard.type("p")
     keyboard.clearAllKeys()
 })
-let shoot_colors: number[] = []
 let jump_colors: number[] = []
-jump_colors = [light.rgb(3, 4, 94), light.rgb(0, 119, 182), light.rgb(0, 180, 216), light.rgb(80, 187, 227), light.rgb(202, 240, 248)]
-shoot_colors = [light.rgb(157, 2, 8), light.rgb(220, 47, 2), light.rgb(232, 93, 4), light.rgb(244, 140, 6), light.rgb(255, 186, 8)]
+let shoot_colors: number[] = []
+jump_colors = [197726, 30646, 46296, 5290979, 13299960]
+shoot_colors = [10289672, 14429954, 15228164, 16026630, 16738824]
 serial.setBaudRate(BaudRate.BaudRate115200)
 forever(function () {
     if (input.buttonsAB.isPressed()) {
