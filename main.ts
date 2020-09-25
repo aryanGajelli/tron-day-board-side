@@ -59,10 +59,9 @@ input.onSwitchMoved(SwitchDirection.Left, function () {
     keyboard.type("p")
     keyboard.clearAllKeys()
 })
-let jump_colors: number[] = []
-let shoot_colors: number[] = []
-jump_colors = [197726, 30646, 46296, 5290979, 13299960]
-shoot_colors = [10289672, 14429954, 15228164, 16026630, 16738824]
+
+let jump_colors = [197726, 30646, 46296, 5290979, 13299960]
+let shoot_colors = [10289672, 14429954, 15228164, 16026630, 16738824]
 serial.setBaudRate(BaudRate.BaudRate115200)
 forever(function () {
     if (input.buttonsAB.isPressed()) {
