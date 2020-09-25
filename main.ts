@@ -1,7 +1,3 @@
-input.onSwitchMoved(SwitchDirection.Right, function () {
-    keyboard.type("[")
-    keyboard.clearAllKeys()
-})
 input.onGesture(Gesture.TiltLeft, function () {
     keyboard.type("a")
     keyboard.clearAllKeys()
@@ -52,9 +48,6 @@ for (let l = 0; l <= 2; l++) {
         }
 light.clear()
     })
-})
-input.onSwitchMoved(SwitchDirection.Left, function () {
-    makerController.player1.setAnalog(ArcadeAnalogButton.DownUp, 1023)
 })
 let shoot_colors: number[] = []
 let jump_colors: number[] = []
