@@ -19,5 +19,5 @@
     "supportedTargets": [
         "adafruit"
     ],
-    "preferredEditor": "tsprj"
+    "preferredEditor": "blocksprj"
 }

@@ -7,8 +7,7 @@ input.onGesture(Gesture.TiltLeft, function () {
     keyboard.clearAllKeys()
 })
 input.buttonA.onEvent(ButtonEvent.Click, function () {
-    keyboard.type("q")
-    keyboard.clearAllKeys()
+    makerController.player1.press(ArcadeButton.A)
     music.jumpUp.play()
     control.runInParallel(function () {
         light.setBrightness(10)
@@ -26,8 +25,7 @@ input.onGesture(Gesture.TiltRight, function () {
     keyboard.clearAllKeys()
 })
 input.buttonB.onEvent(ButtonEvent.Click, function () {
-    keyboard.type("i")
-    keyboard.clearAllKeys()
+    makerController.player1.press(ArcadeButton.B)
     music.stopAllSounds()
     music.pewPew.play()
     control.runInParallel(function () {
@@ -56,16 +54,15 @@ light.clear()
     })
 })
 input.onSwitchMoved(SwitchDirection.Left, function () {
-    keyboard.type("p")
-    keyboard.clearAllKeys()
+    makerController.player1.setAnalog(ArcadeAnalogButton.DownUp, 1023)
 })
-
-let jump_colors = [197726, 30646, 46296, 5290979, 13299960]
-let shoot_colors = [10289672, 14429954, 15228164, 16026630, 16738824]
+let shoot_colors: number[] = []
+let jump_colors: number[] = []
+jump_colors = [197726, 30646, 46296, 5290979, 13299960]
+shoot_colors = [10289672, 14429954, 15228164, 16026630, 16738824]
 serial.setBaudRate(BaudRate.BaudRate115200)
 forever(function () {
     if (input.buttonsAB.isPressed()) {
-        keyboard.type("j")
-        keyboard.clearAllKeys()
+        makerController.player1.press(ArcadeButton.AB)
     }
 })
